@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
+ReactDOM.render( //Document Object Manager => renderizar componetes (clase, render(Node))
+  <React.StrictMode> 
     <App />
   </React.StrictMode>,
   document.getElementById('root')
