@@ -3,11 +3,13 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Grid } from '@mui/material';
+import { useNavigate } from "react-router-dom";
 import "./styles/Login.css"
 import useLogin from '../hooks/useLogin';
 
 export default function Login(props) {
-    const {loginWithEmailAndPassword} = useLogin; 
+    const {loginWithEmailAndPassword} = useLogin(); 
+    const navigate = useNavigate();
     return (
         <Grid container style={{ height: "100vh"}}>
             <Grid xs={12} md={12} lg={12} item style={{marginTop: '200px'}} >
@@ -16,7 +18,7 @@ export default function Login(props) {
                 <TextField id="outlined-basic" label="example@example.com"  style={{textAlign:"center"}} />
                 <label style={{ display: "block", margin: "10px" }}>Constraseña</label>
                 <TextField id="outlined-basic"  placeholder='**************' style={{textAlign:"center"}}   />
-                <Button variant="contained" style={{display: "block", marginLeft: 'auto', marginRight: 'auto', marginTop: '20px'}}>Ingresar</Button>
+                <Button variant="contained" onClick={() => navigate("/home")} style={{display: "block", marginLeft: 'auto', marginRight: 'auto', marginTop: '20px'}}>Ingresar</Button>
             </Grid>
         </Grid>
     )

@@ -4,17 +4,21 @@ import Home from './components/Home';
 import Login from './components/Login';
 import {
   BrowserRouter,
-  Switch,
+  Routes,
   Route,
   Link,
 } from "react-router-dom";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-          <Route path="/login" component={Login}/>   
-        </Switch>
-    </BrowserRouter>
+    <div className='App'> 
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Login></Login>} />
+          <Route path="/home" element={<Home></Home>} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+
   );
 }
