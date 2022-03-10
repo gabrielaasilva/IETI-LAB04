@@ -1,13 +1,20 @@
 import React from 'react';
 import './App.css';
+import Home from './components/Home';
 import Login from './components/Login';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Login />
-    </div>
+    <BrowserRouter>
+      <Switch>
+          <Route path="/login" component={Login}/>   
+        </Switch>
+    </BrowserRouter>
   );
 }
-
-export default App;

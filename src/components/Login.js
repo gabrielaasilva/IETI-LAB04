@@ -4,32 +4,20 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Grid } from '@mui/material';
 import "./styles/Login.css"
+import useLogin from '../hooks/useLogin';
 
 export default function Login(props) {
-    // const { name = "usuario" } = props; 
+    const {loginWithEmailAndPassword} = useLogin; 
     return (
-        // <Box
-        //     component="form"
-        //     noValidate
-        //     autoComplete="off"
-        // >
-        //     <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-        // </Box>
-        <Grid container style={{ justifyContent: 'center', alignItem: "center", height: "100vh"}}>
+        <Grid container style={{ height: "100vh"}}>
             <Grid xs={12} md={12} lg={12} item style={{marginTop: '200px'}} >
+                <h1>Iniciar Sesión</h1>
                 <label style={{ display: "block", margin: "10px" }}>Correo electrónico</label>
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-            </Grid>
-            <Grid xs={12} md={12} lg={12} item style={{marginBottom: '250px'}} >
+                <TextField id="outlined-basic" label="example@example.com"  style={{textAlign:"center"}} />
                 <label style={{ display: "block", margin: "10px" }}>Constraseña</label>
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                <TextField id="outlined-basic"  placeholder='**************' style={{textAlign:"center"}}   />
+                <Button variant="contained" style={{display: "block", marginLeft: 'auto', marginRight: 'auto', marginTop: '20px'}}>Ingresar</Button>
             </Grid>
-            <Grid xs={12} md={12} lg={12} item>
-                <Button variant="contained" style={{ marginLeft: 'auto', marginRight: 'auto', marginBottom: '1000px'}}>Log In</Button>10
-            </Grid>
-
         </Grid>
-
-
     )
 }
