@@ -29,8 +29,9 @@
       "react-app",
       "react-app/jest",
       "prettier"
-    ]
-  },
+    ],
+    "prettier": {}
+  },  
   "browserslist": {
     "production": [
       ">0.2%",
