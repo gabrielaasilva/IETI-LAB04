@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import * as serviceWorker from './serviceWorkerRegistration'; 
 
 ReactDOM.render( //Document Object Manager => renderizar componetes (clase, render(Node))
   <React.StrictMode> 
@@ -15,3 +16,4 @@ ReactDOM.render( //Document Object Manager => renderizar componetes (clase, rend
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+serviceWorker.register();
