@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import * as serviceWorker from './serviceWorkerRegistration'; 
+import * as serviceWorker from './serviceWorkerRegistration';
 
 ReactDOM.render( //Document Object Manager => renderizar componetes (clase, render(Node))
-  <React.StrictMode> 
+  <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

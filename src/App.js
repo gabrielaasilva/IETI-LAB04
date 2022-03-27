@@ -9,6 +9,12 @@ import {
   Link,
 } from "react-router-dom";
 
+import initialState from './utils';
+import themeReducer from './utils';
+import { ThemeContext } from './ThemeContext';
+import { UserContext } from './UserContext';
+
+
 export default function App() {
   return (
     <div className='App'> 
@@ -19,6 +25,7 @@ export default function App() {
         </Routes>
       </BrowserRouter>
     </div>
-
   );
 }
+
+const [state, dispatch] = useReducer(themeReducer, initialState);
